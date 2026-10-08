@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "fraudshield-ai"
+version = "1.0.0"
+description = "Advanced fraud risk scoring portfolio demo"
+requires-python = ">=3.10"
+[tool.setuptools.packages.find]
+include = ["src*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

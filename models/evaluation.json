@@ -1,0 +1,51 @@
+{
+  "dataset": "ULB Credit Card Fraud Detection",
+  "split": "chronological 60/20/20",
+  "counts": {
+    "train": 170884,
+    "validation": 56961,
+    "test": 56962
+  },
+  "validation_models": {
+    "dummy": {
+      "average_precision": 0.0010006846789908884,
+      "roc_auc": 0.5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "alert_rate": 0.0,
+      "threshold": 0.5
+    },
+    "logistic": {
+      "average_precision": 0.7715517684407991,
+      "roc_auc": 0.9709877639409926,
+      "precision": 0.026842105263157896,
+      "recall": 0.8947368421052632,
+      "alert_rate": 0.03335615596636295,
+      "threshold": 0.5
+    },
+    "xgboost": {
+      "average_precision": 0.777090652607444,
+      "roc_auc": 0.979062304996288,
+      "precision": 0.6984126984126984,
+      "recall": 0.7719298245614035,
+      "alert_rate": 0.0011060199083583505,
+      "threshold": 0.5
+    }
+  },
+  "selected_model": "xgboost",
+  "threshold_from_validation": 0.24126240611076355,
+  "min_validation_precision_requested": 0.5,
+  "test_metrics": {
+    "average_precision": 0.8008263980956675,
+    "roc_auc": 0.9775116751923404,
+    "precision": 0.6082474226804123,
+    "recall": 0.7866666666666666,
+    "alert_rate": 0.0017028896457287315,
+    "threshold": 0.24126240611076355
+  },
+  "notes": [
+    "Dataset Time covers ~2 days only; not representative of real deployment drift.",
+    "Scores are not calibrated probabilities.",
+    "Threshold chosen on validation only; test assessed once."
+  ]
+}
