@@ -104,6 +104,13 @@ The Streamlit dashboard includes five main areas:
 
 **Monitoring:** Dataset quality checks and scoring summaries.
 
+### Overview Dashboard
+
+![FraudShield AI Overview](docs/images/overview.png)
+
+[Launch Live Dashboard](https://fraudshield-ai-eq8gvh5mmnbzuwnexaql8b.streamlit.app)
+
+
 ### Screenshots
 
 Screenshots will be added after the deployed dashboard has been verified.
