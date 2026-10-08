@@ -1,16 +1,31 @@
 """FraudShield AI V4 — portfolio transaction intelligence command center."""
+
 from pathlib import Path
+import sys
 import json
 import time
+
+# Fix imports for Streamlit Cloud
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
 import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from sklearn.metrics import (average_precision_score, precision_score, recall_score,
-                             confusion_matrix, precision_recall_curve)
+
+from sklearn.metrics import (
+    average_precision_score,
+    precision_score,
+    recall_score,
+    confusion_matrix,
+    precision_recall_curve
+)
+
 from src.fraudshield.features import FEATURES, validate
 from src.fraudshield.predict import load_model
+
 
 st.set_page_config(page_title="FraudShield AI V4 | Command Center", page_icon="🛡️",
                    layout="wide", initial_sidebar_state="expanded")
